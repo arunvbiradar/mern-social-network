@@ -28,13 +28,13 @@ const ProfileSchema = new mongoose.Schema({
   githubusername: {
     type: String
   },
-  expirence: [
+  experience: [
     {
       title: { type: String, required: true },
       company: { type: String, required: true },
-      location: { type: String, required: true },
+      location: { type: String },
       from: { type: Date, required: true },
-      to: { type: Date, required: true },
+      to: { type: Date },
       current: { type: Boolean, required: true },
       description: { type: String }
     }
@@ -45,7 +45,7 @@ const ProfileSchema = new mongoose.Schema({
       degree: { type: String, required: true },
       fieldofstudy: { type: String, required: true },
       from: { type: Date, required: true },
-      to: { type: Date, required: true },
+      to: { type: Date },
       current: { type: Boolean, required: true },
       description: { type: String }
     }
