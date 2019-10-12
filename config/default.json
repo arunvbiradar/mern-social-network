@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://avrin:avrin123@cluster0-ymnid.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtToken": "mySecretToken"
+  "jwtToken": "mySecretToken",
+  "githubClientId": "f90f8a50dba02e5e0fa9",
+  "githubSecret": "5ae310a826deb032fe01dd5bad076e13f748f00a"
 }
