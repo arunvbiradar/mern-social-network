@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const PostScheme = new Schema({
+const PostSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
     ref: "users"
@@ -24,28 +24,30 @@ const PostScheme = new Schema({
   ],
   comments: [
     {
-      type: Schema.Types.ObjectId,
-      ref: "users"
-    },
-    text: {
+      user: {
+        type: Schema.Types.ObjectId,
+        ref: "users"
+      },
+      text: {
         type: String,
         required: true
-    },
-    name: {
+      },
+      name: {
         type: String
-    },
-    avatar: {
+      },
+      avatar: {
         type: String
-    },
-    date: {
+      },
+      date: {
         type: Date,
         default: Date.now
+      }
     }
   ],
   date: {
-      type: Date,
-      default: Date.now
+    type: Date,
+    default: Date.now
   }
 });
 
-module.exports = Post = mongoose.model('post', PostSchema);
+module.exports = Post = mongoose.model("post", PostSchema);
