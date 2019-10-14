@@ -24,17 +24,26 @@ const Login = () => {
       <p className='lead'>
         <i className='fa fa-user'></i> Sign into Your Account
       </p>
-      <form className='form' action='/dashboard'>
+      <form className='form' action='/dashboard' onSubmit={e => onSubmit(e)}>
         <div className='form-group'>
           <input
             type='email'
             placeholder='Email Address'
             name='email'
+            value={email}
+            onChange={e => onChange(e)}
             required
           />
         </div>
         <div className='form-group'>
-          <input type='password' placeholder='Password' name='password' />
+          <input
+            type='password'
+            placeholder='Password'
+            name='password'
+            value={password}
+            onChange={e => onChange(e)}
+            required
+          />
         </div>
         <input type='submit' className='btn btn-primary' value='Login' />
       </form>

@@ -31,7 +31,7 @@ const Register = () => {
       </p>
       <form
         className='form'
-        action='create-profile.html'
+        action='create-profile'
         onSubmit={e => onSubmit(e)}
       >
         <div className='form-group'>
